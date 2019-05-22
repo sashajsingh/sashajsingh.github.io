@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=,chrome=1">
+    <title>Job Description | employtt</title>
+        <!--The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js" type="text/javascript"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js" type="text/javascript"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js" type="text/javascript"></script>
+        <link href="../styles/jobdescription.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Edit job description</h1>
+
+  <form >
+    <label for ="about" id="describe-labels">About</label><br>
+    <input type="text" name="about" placeholder="Describe job..." id="describefield" required><br><br><br>
+
+    <label for ="skills" id="describe-labels">Skills Required</label><br>
+    <input type="text" name="skills" placeholder="" id="describefield" required><br><br><br>
+    
+    <label for ="levels" id="describe-labels">Levels</label><br>
+    <input type="search" name="levels" placeholder="" id="describefield" list="levels-list" autocomplete="on" required><br><br><br>
+      		<datalist id="levels-list">	
+    					<option value="Trainee"></option>
+    					<option value="Entry Level"></option> 
+  						<option value="Junior"></option>
+     					<option value="Supervisory"></option> 	
+  						<option value="Senior"></option>				 					
+    					<option value="Manager"></option>		
+     					<option value="Admin"></option>	
+  					</datalist>  
+    
+    <label for="location-filter">Location </label>	<br>
+  		<input  id="describe-labels" type="search" id="location-filter" name="location" placeholder="" list="locations-list" autocomplete="off" /><br><br><br>		
+  					<datalist id="locations-list">	
+  						<option value="All"></option>	
+  						<option value="North"></option>
+    					<option value="Central"></option>
+    					<option value="South"></option>					 					
+    					<option value="Borough of Arima"></option>
+    					<option value="Borough of Chaguanas"></option>
+    					<option value="Couva-Tabaquite-Talparo"></option>
+    					<option value="Diego Martin Region"></option>
+    					<option value="Gasparillo"></option>
+    					<option value="Penal-Debe"></option>
+    					<option value="Borough of Point Fortin"></option>
+    					<option value="Port of Spain"></option>
+    					<option value="Princes Town Region"></option>
+    					<option value="Rio Claro-Mayaro"></option>
+    					<option value="San Juan-Laventille"></option>
+    					<option value="Sangre Grande Region"></option>
+    					<option value="City of San Fernando"></option>
+    					<option value="Siparia Region"></option>
+    					<option value="Tunapuna-Piarco"></option>
+    					<option value="Tobago"></option>					
+  					</datalist>  		    
+  					
+    <label for="category-filter" id="describe-labels"> Category</label>	 <br>  
+    <input type="search" id="describefield" name="category" placeholder="" list="category-list" autocomplete="off" > <br><br><br>
+  					<datalist id="category-list">	
+  						<option value="All"></option>						 					
+    					<option value="Accounting"></option>
+    					<option value="Admin & Clerical"></option>
+    					<option value="Automotive"></option>
+    					<option value="Banking"></option>
+    					<option value="Broadcast - Journalism, Radio"></option>
+    					<option value="Business Development"></option>
+    					<option value="Construction"></option>
+    					<option value="Consultant"></option>
+    					<option value="Contract, Freelance"></option>
+    					<option value="Customer Service"></option>
+    					<option value="Design"></option>
+    					<option value="Distribution, Shipping"></option>
+    					<option value="Education - Teaching"></option>
+    					<option value="Engineering"></option>
+    					<option value="Entry level/Graduate"></option>
+    					<option value="Executive"></option>	
+    					<option value="Facilities"></option>						 					
+    					<option value="Finance"></option>
+    					<option value="Health Care"></option>
+    					<option value="General Labour"></option>
+    					<option value="Human Resources"></option>
+    					<option value="Information Technology"></option>
+    					<option value="Installation, Maintenance, Repair"></option>
+    					<option value="Internships"></option>
+    					<option value="Legal"></option>
+    					<option value="Management"></option>
+    					<option value="Media"></option>
+    					<option value="Marketing"></option>
+    					<option value="Nonprofit, Social Services"></option>
+    					<option value="Other"></option>
+    					<option value="Part Time"></option>
+    					<option value="Pharmaceutical"></option>
+    					<option value="Purchasing, Procurement"></option>
+    					<option value="Research"></option>
+    					<option value="Food Service"></option>
+    					<option value="Science"></option>
+    					<option value="Skilled Labour, Trades"></option>	
+    					<option value="Strategy, Planning"></option>
+    					<option value="Telecommunications"></option>
+    					<option value="Transportation"></option>
+    					<option value="Work from Home"></option>    					   									
+  					</datalist>  			 
+    
+    <label for ="employer" id="describe-labels">Employer</label><br>
+    <input type="text" name="employer" placeholder="Company, Agency, Ministry, etc" id="describefield" required><br><br><br>
+
+    <label for ="jobstatus" id="describe-labels">Job Status</label><br>
+  			<input  id="describefield"  type="search" id="jobstatus-filter" name="jobstatus" placeholder="" list="jobstatus-list" autocomplete="off" /><br><br><br>		
+  					<datalist id="jobstatus-list">	
+  						<option value="Full-time"></option>	
+  						<option value="Part-time"></option>
+    					<option value="Contract"></option>
+    					<option value="Internship"></option>					 					
+    					<option value="Other"></option>			
+  					</datalist>  
+    
+    <label for ="age" id="describe-labels">Age Requirement</label><br>
+    <input type="text" name="age" placeholder="" id="describefield" required><br><br><br>
+    
+    <label for ="gender" id="describe-labels">Gender</label><br>
+      			<input  id="describefield"  type="search" id="gender-filter" name="gender" placeholder="" list="gender-list" autocomplete="on" /><br><br><br>		
+  					<datalist id="gender-list">	
+  						<option value="Male"></option>	
+  						<option value="Female"></option>
+    					<option value="Other"></option>
+    					<option value="All"></option>					 						
+  					</datalist>  
+    
+    <label for ="salary" id="describe-labels">Salary</label><br>
+    <input type="text" name="salary" placeholder="" id="describefield" required><br><br><br>
+    
+    <label for ="opened" id="describe-labels">Opened</label><br>
+    <input type="date" name="opened" placeholder="May 31st, 2019" id="describefield" required><br><br><br>
+    
+    <label for ="deadline" id="describe-labels">Closes</label><br>
+    <input type="date" name="deadline" placeholder="May 31st, 2019" id="describefield" required><br><br><br>
+    
+
+  
+    <progress value="0" max ="100" id="resumeFile">0%</progress><br>
+
+    <input type="submit" value="Submit" id="submitButton" href="#" action="./index.html" method="post"><br><br>
+
+    <!--TODO: Password verification and alert if passwords do not match. Client side. privacy policy-->
+ </form>
+
+
+
+  <script src="./job_description_js.js"></script>
+</body>
+</html>

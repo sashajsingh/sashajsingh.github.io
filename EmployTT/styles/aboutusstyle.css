@@ -1,0 +1,12 @@
+.aboutus, .employTT-address,
+.employTT-phone ,.employTT-email{
+        opacity: 0.5;
+}
+
+body{
+    background-image: url("./images/aboutusimg.jpg");   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:center;
+
+}

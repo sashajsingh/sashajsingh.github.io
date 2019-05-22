@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=,chrome=1">
+    <title>User Profile | employtt</title>
+        <!--The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js" type="text/javascript"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js" type="text/javascript"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js" type="text/javascript"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+        <link href="../styles/userprofilestyle.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Create User Profile</h1>
+
+  <form id="signup-form">
+      <label for ="firstName" id="profile-labels">First Name: </label>
+      <input type="text" name="firstName" placeholder="First Name" class="profilefield fname" id="firstName" autocomplete="family-name"required ><br><br><br>
+  
+      <label for ="lastName" id="profile-labels">Last Name: </label>
+      <input type="text" name="lastName" placeholder="Last Name" class="profilefield lName"  id="lastName"autocomplete="given-name" required><br><br><br>
+  
+      <label for ="email" id="profile-labels">Email: </label>
+      <input type="email" name="email" placeholder="Email Address" class="profilefield email" id="signup-email" autocomplete="email" required><br><br><br>
+  
+      <label for ="password" id="profile-labels">Password: </label>
+      <input type="password" name="password" placeholder="Password" class="profilefield password" id="signup-password" autocomplete="new-password" required><br><br><br>
+
+      <label for ="password" id="profile-labels">Confirm Password: </label>
+      <input type="password" name="password" placeholder="Re-type Password" class="profilefield password" id="cnfm-password" autocomplete="new-password" required><br><br><br>
+
+    <label for ="address1" id="profile-labels"> Address line 1</label><br>
+    <input type="text" name="address1" placeholder="Street address" id="address1"  autocomplete="off" required><br>
+    <label for ="address2" id="profile-labels"> Address line 2</label><br>
+    <input type="text" name="address2" placeholder="Optional" id="address2"  autocomplete="off" ><br>
+    <label for ="town" id="profile-labels"> City/Town</label><br>
+    <input type="text" name="town" placeholder=" " id="cityortown"  autocomplete="off" ><br><br><br>
+    
+    <label for ="phonenumber" id="profile-labels"> Phone number</label><br>
+    <input type="text" name="phonenumber" placeholder="" id="phonenumber"  autocomplete="off" ><br><br><br>
+    
+    <label for ="disable" id="profile-labels"> Disabilities</label><br>
+    <input type="text" name="disable" placeholder=" " id="disabilities"  autocomplete="off" ><br><br><br>
+    
+    <!-- 
+    <input type="file" value="upload" name="resume" id="resumeButton" required>  
+    <progress value="0" max ="100" id="resumeFile">0%</progress>
+    <label for ="resume" id="profile-labels"> Resume/CV</label><br>
+    
+
+    <input type="file" value="upload" name="resume" id="transcriptButton">  
+    <progress value="0" max ="100" id="transcriptFile">0%</progress>
+    <label for ="resume" id="profile-labels">Transcript</label><br>
+
+    <input type="file" value="upload" name="resume" id="birthPaperButton">  
+    <progress value="0" max ="100" id="birthPaperFile">0%</progress>
+    <label for ="resume" id="profile-labels">Birthpaper</label><br>
+
+    <input type="file" value="upload" name="resume" id="referencesButton">  
+    <progress value="0" max ="100" id="referencesFiles">0%</progress>
+    <label for ="resume" id="profile-labels">References</label><br>
+
+
+    <input type="file" value="upload" name="resume" id="addMatButton">  
+    <progress value="0" max ="100" id="addMatFile">0%</progress>
+    <label for ="resume" id="profile-labels">Additional Material <i>(Certificates)</i></label><br><br>
+  -->
+   
+
+
+    <div id="drop_zone">
+      <p id ="file-names"> Drag one or more files to this Drop Zone ...</p>
+    </div>
+
+    <input type="submit" value="Submit" id="submitButton" href="#" action="#"><br><br>
+    <input type="submit" value="Google Sign in" id="googleSignIn" href="#" action="#"><br><br>
+    <input type="submit" value="Update" id="updateButton" href="#" action="#"><br><br>
+    <input type="submit" value="Remove" id="removeButton" href="#" action="#"><br><br>
+
+
+
+
+    <!--TODO: Password verification and alert if passwords do not match. Client side. privacy policy-->
+ </form>
+
+
+
+  <script src="../scripts/userprofile.js"></script>
+</body>
+</html>

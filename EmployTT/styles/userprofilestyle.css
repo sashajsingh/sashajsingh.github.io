@@ -1,0 +1,13 @@
+body{
+    background-color: whitesmoke;
+}
+
+#drop_zone {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 480px;
+    height: 250px;
+    font-family: sans-serif;
+    margin: 100px auto;
+    padding: 20px;
+}
